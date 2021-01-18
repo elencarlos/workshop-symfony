@@ -1,0 +1,17 @@
+sonata_user:
+  class:
+    user: App\Entity\Usuario
+    group: App\Entity\Grupo
+  manager_type: orm # can be orm or mongodb
+  admin: # Admin Classes
+    user:
+      class: Sonata\UserBundle\Admin\Entity\UserAdmin
+      controller: Sonata\AdminBundle\Controller\CRUDController
+      translation: SonataUserBundle
+
+    group:
+      class: Sonata\UserBundle\Admin\Entity\GroupAdmin
+      controller: Sonata\AdminBundle\Controller\CRUDController
+      translation: SonataUserBundle
+  impersonating:
+    route: sonata_admin_dashboard

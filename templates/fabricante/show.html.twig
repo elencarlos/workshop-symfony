@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Carro{% endblock %}
+
+{% block body %}
+    <h1>Carro</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ fabricante.id }}</td>
+            </tr>
+            <tr>
+                <th>Nome</th>
+                <td>{{ fabricante.nome }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-primary" href="{{ path('fabricante_list') }}">Voltar para Lista</a>
+
+    <a class="btn btn-default" href="{{ path('fabricante_edit', {'id': fabricante.id}) }}">Editar</a>
+
+{% endblock %}

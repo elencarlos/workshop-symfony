@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="en" datatype="plaintext" original="">
+        <body>
+            <trans-unit id="sonata_administration">
+                <source>sonata_administration</source>
+                <target>Administração</target>
+            </trans-unit>
+            <trans-unit id="list.label__action">
+                <source>list.label__action</source>
+                <target>Ações</target>
+            </trans-unit>
+            <trans-unit id="list.label_id">
+                <source>list.label_id</source>
+                <target>ID</target>
+            </trans-unit>
+            <trans-unit id="list.label_nome">
+                <source>list.label_nome</source>
+                <target>Nome</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_carro_list">
+                <source>breadcrumb.link_carro_list</source>
+                <target>Lista de Carros</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

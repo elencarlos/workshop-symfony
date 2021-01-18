@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FabricanteController!{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>Lista de Fabricantes</h1>
+        <a class="btn btn-primary" href="{{ path('fabricante_create') }}">Adicionar Novo</a>
+        <hr>
+        <table class="table table-striped">
+            <thead>
+            <th>
+                Nome
+            </th>
+            <th>Ações</th>
+            </thead>
+            <tbody>
+            {% for fabricante in fabricantes %}
+                <tr>
+                    <td>{{ fabricante.nome }}</td>
+                    <td>
+                        <a class="btn btn-primary" href="{{ path('fabricante_edit', {'id':fabricante.id}) }}">Editar</a>
+                        <a class="btn btn-primary" href="{{ path('fabricante_show', {'id':fabricante.id}) }}">Ver</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

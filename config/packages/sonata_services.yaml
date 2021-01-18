@@ -1,0 +1,27 @@
+services:
+  admin.cliente:
+    class: App\Admin\ClienteAdmin
+    arguments:
+      - ~
+      - App\Entity\Cliente
+      - ~
+    tags:
+      - name: sonata.admin
+        manager_type: orm
+        group: admin
+        label: 'Cliente'
+        label_translator_strategy: sonata.admin.label.strategy.underscore
+
+  admin.compra:
+    class: App\Admin\CompraAdmin
+    arguments: [ ~, App\Entity\Compra, App\Controller\CompraAdminController ]
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: admin, label: Compra, label_translator_strategy: sonata.admin.label.strategy.underscore }
+    public: true
+
+  admin.carro:
+    class: App\Admin\CarroAdmin
+    arguments: [ ~, App\Entity\Carro, App\Controller\CarroAdminController ]
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: admin, label: Carros, label_translator_strategy: sonata.admin.label.strategy.underscore }
+    public: true
